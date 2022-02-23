@@ -1,0 +1,39 @@
+window.onload = sliderFunction();
+
+function sliderFunction(){
+    var sliderList = document.getElementsByClassName('slider-content');
+
+    if(!sliderList[0].classList.contains('show-content')){
+        sliderList[0].classList.add('show-content');
+    }
+
+    for(var slide of sliderList){
+        if(!slide.classList.contains('show-content')){
+            slide.classList.add('hide-content');
+        }
+    }
+
+    var index = 0;
+    var slider = document.getElementsByClassName('slider')[0];
+
+    slider.addEventListener('click', function(){
+        index++;
+        for(var slide of sliderList){
+            if(slide.classList.contains('show-content') && index <3 ){
+                slide.classList.remove('show-content');
+                slide.classList.add('hide-content');
+                slide.nextElementSibling.classList.remove('hide-content');
+                slide.nextElementSibling.classList.add('show-content');
+                break;
+            } else if(slide.classList.contains('show-content') && index == 3){
+                slide.classList.remove('show-content');
+                slide.classList.add('hide-content');
+                slide.previousElementSibling.previousElementSibling.classList.remove('hide-content');
+                slide.previousElementSibling.previousElementSibling.classList.add('show-content');
+                index = 0;
+                break;
+            }
+        }
+    })
+}
+

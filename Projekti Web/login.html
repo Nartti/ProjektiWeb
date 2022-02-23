@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+	</head>
+	<body onload="document.myform.text1.focus()">
+		<div id="main">
+			
+			<div id="header">
+				<div id="headerbox">
+					<h1 id="logo">Website Title</h1>
+					<a href="home.html">Home</a>
+					<a href="">All Categories</a>
+					<a href="register.html">Register</a>
+					<a href="login.html">Log In</a>
+					<a href="">Account</a>
+				</div>
+			</div>
+			<div id="toolbar">
+				<div id="toolbarbox">
+				<h2>Top categories</h2><br>
+					<a href="">Sports</a>
+					<a href="">Technology</a>
+					<a href="">Climate</a>
+					<a href="">Entertainment</a>
+					<a href="">Health</a>
+					<a href="">Art</a>
+				</div>
+			</div>
+			<div id="containerlogin">
+				<div id="loginformdiv">
+					<form class="box" name="form1" action="#">
+					  <h1>Login Form</h1>
+					  <input type="text" name="text1" placeholder="Enter Email" /><br><br>
+					  <input type="password" id="password" placeholder="Enter Password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br><br>
+					  <input type="submit" class="submit" name="Submit" value="Submit" onclick="ValidateEmail(document.form1.text1)" />
+					  
+					</form>
+				</div>
+			</div>
+			<div id="footer">
+				<div id="footerbox">
+					<a href="">Contact</a>
+					<a href="">Privacy Policy</a>
+					<a href="">Terms of Use</a>
+					<a href="">About</a>
+				</div>
+			</div>
+		</div>
+		<script src="js/main.js"></script>
+	</body>
+</html>
